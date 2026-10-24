@@ -104,7 +104,7 @@
     />
     <meta
       property="og:image"
-      content="https://www.sowmsglamstudio.com/images/hero-bride.jpg"
+      content="https://www.sowmsglamstudio.com/hero-bride.jpg"
     />
     <meta
       property="og:image:alt"
@@ -124,7 +124,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://www.sowmsglamstudio.com/images/hero-bride.jpg"
+      content="https://www.sowmsglamstudio.com/hero-bride.jpg"
     />
     <!-- Google tag (gtag.js) -->
     <script
@@ -174,7 +174,7 @@
         "@context": "https://schema.org",
         "@type": "BeautySalon",
         "name": "Sowm's Glam Studio",
-        "image": "https://www.sowmsglamstudio.com/images/hero-bride.jpg",
+        "image": "https://www.sowmsglamstudio.com/hero-bride.jpg",
         "telephone": "+916369939029",
         "priceRange": "₹₹",
         "address": {
@@ -1869,13 +1869,11 @@
           <div class="ba tl">
             <div class="bx">
               <div class="sl">
-                <img src="images/skin-before.jpg" alt="Before" loading="lazy" />
-                <img
+                <img src="./skin-before.jpg" alt="Before" loading="lazy" /><img
                   class="af"
-                  src="images/skin-after.jpg"
+                  src="./skin-after.jpg"
                   alt="After"
                   loading="lazy"
-                />
                 /><i class="hn"></i><span class="l">Before (Natural Skin)</span
                 ><span class="r">After (Muhurtham Glow)</span
                 ><input
@@ -1904,13 +1902,11 @@
             </div>
             <div class="bx">
               <div class="sl">
-                <img src="./hair-before.jpg" alt="Before" loading="lazy" />
-                <img
+                <img src="./hair-before.jpg" alt="Before" loading="lazy" /><img
                   class="af"
                   src="./hair-after.jpg"
                   alt="After"
                   loading="lazy"
-                />
                 /><i class="hn"></i
                 ><span class="l">Before (Natural Texture)</span
                 ><span class="r">After (Artisanal Jadai)</span
@@ -2481,10 +2477,8 @@
         "9e1f4": "hair-jadai",
         "46c3e": "party-makeup",
         df4cf: "facial-spa",
-        "7ddd8": "before-after-skin",
-        "1d1da": "before-after-hair",
       };
-      const SRC = (id) => "images/" + (NAMES[id] || id) + ".jpg";
+      const SRC = (id) => "./" + (NAMES[id] || id) + ".jpg";
       /* ===== DATA ===== */
       const $ = (s, r = document) => r.querySelector(s),
         $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -2734,7 +2728,7 @@
         `<div class="ph ${cls}"><img src="${SRC(id)}" alt="${alt}" loading="lazy" decoding="async"></div>`;
       /* ===== RENDER ===== */
       $$("[data-i]").forEach((i) => (i.src = SRC(i.dataset.i)));
-      $("#lgo").src = $("#lgo2").src = "images/logo.png";
+      $("#lgo").src = $("#lgo2").src = "./logo.png";
       $("#svc").innerHTML = SV.map(
         (s) =>
           `<article class="card rv0">${img(s[3], s[0])}<div class="cb"><small>${s[1]}</small><h3>${s[0]}</h3><p>${s[2]}</p><a href="#book" data-book data-svc="${s[0]}">${s[4]} →</a></div></article>`,
